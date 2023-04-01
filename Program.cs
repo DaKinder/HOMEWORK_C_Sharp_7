@@ -91,7 +91,7 @@ int[,] Create2DRandomArray(int row, int column, int minValue, int maxValue)
     return array;
 }
 
-double[] FindAverageInRows(int[,] array)
+double[] FindAverageInColumns(int[,] array)
 {
     double[] newArray = new double[array.GetLength(1)];
 
@@ -132,7 +132,7 @@ int maxValue = Convert.ToInt32(Console.ReadLine());
 
 System.Console.WriteLine();
 int[,] array = Create2DRandomArray(row, column, minValue, maxValue);
-double[] averageArray = FindAverageInRows(array);
+double[] averageArray = FindAverageInColumns(array);
 Prit2DArray(array);
 Console.WriteLine();
 PritArray(averageArray);
