@@ -93,14 +93,14 @@ int[,] Create2DRandomArray(int row, int column, int minValue, int maxValue)
 
 double[] FindAverageInRows(int[,] array)
 {
-    double[] newArray = new double[array.GetLength(0)];
+    double[] newArray = new double[array.GetLength(1)];
 
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int j = 0; j < array.GetLength(1); j++)
     {
         double sum = 0;
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int i = 0; i < array.GetLength(0); i++)
             sum = sum + array[i, j];
-        newArray[i] = sum / array.GetLength(1);
+        newArray[j] = sum / array.GetLength(0);
     }
     return newArray;
 }
